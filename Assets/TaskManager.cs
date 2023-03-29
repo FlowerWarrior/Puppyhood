@@ -30,6 +30,7 @@ public class TaskManager : MonoBehaviour
       task.TuneTheRadio,
       task.UnlockChest,
       task.EnterDoor
+
     };
     public int currentTaskID = 0;
 

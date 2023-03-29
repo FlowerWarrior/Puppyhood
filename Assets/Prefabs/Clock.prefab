@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4696311088711506703}
   - component: {fileID: 4696311088711506696}
+  - component: {fileID: 1718326781}
+  - component: {fileID: 1718326782}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4696311088711506702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.51, z: 0}
-  m_LocalScale: {x: 1.7375, y: 0.24578126, z: 1}
+  m_LocalScale: {x: 1.7375, y: 0.29493752, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4696311090189099459}
@@ -84,6 +86,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1718326781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4696311088711506702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999999, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1718326782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4696311088711506702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e5ee34217e7924087baf7366f15de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clockFaceCanvas: {fileID: 8885436023591969489, guid: ff4d467439b968b46b0b911cba9d25d2, type: 3}
 --- !u!1 &4696311090189099458
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +123,7 @@ GameObject:
   - component: {fileID: 4696311090189099459}
   - component: {fileID: 4696311090189099468}
   - component: {fileID: 4696311090189099469}
+  - component: {fileID: 511307582}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -182,3 +211,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75bba02620aede45b9d5b119aec9e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &511307582
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4696311090189099458}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b46912ecd46cad941ab8b19eb669e61a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
