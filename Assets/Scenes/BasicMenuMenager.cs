@@ -20,11 +20,13 @@ public class BasicMenuMenager : MonoBehaviour
 
     public void GoCredits()
     {
-        SceneManager.LoadScene(creditsSceneName);
+        SceneManager.UnloadSceneAsync(MenuSceneName);
+        SceneManager.LoadScene(creditsSceneName, LoadSceneMode.Additive);
     }
 
     public void GoMenu()
     {
-        SceneManager.LoadScene(MenuSceneName);
+        SceneManager.UnloadSceneAsync(creditsSceneName);
+        SceneManager.LoadScene(MenuSceneName, LoadSceneMode.Additive);
     }
 }
