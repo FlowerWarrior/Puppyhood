@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8e33062af59d848a64e68eedb2029a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creditsSceneName: 
+  creditsSceneName: Credits
   MenuSceneName: Menu
 --- !u!1 &2032628477
 GameObject:
