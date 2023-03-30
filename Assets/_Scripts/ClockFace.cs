@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockFace : MonoBehaviour
+public class ClockFace : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject clockFaceCanvas;
 
