@@ -95,6 +95,8 @@ public class AudioMgr : MonoBehaviour
 
     public void PlayRandomSniff()
     {
+        if (interactSniff.Length == 0) return;
+
         PlaySound(interactSniff[Random.Range(0, interactSniff.Length)]);
     }
 }
