@@ -11,6 +11,7 @@ public class RotateUIObject : MonoBehaviour
     public float volumeChangeSpeed = 5f;
     public float maxVolume = 1f;
     public float minVolume = 0f;
+    public float a, b;
 
     void Start() {
         volumeChangeSpeed = 2f;
@@ -35,7 +36,7 @@ public class RotateUIObject : MonoBehaviour
 
     public void Radio() {
         rot = transform.rotation.eulerAngles.z;
-        if((rot > 300) && (rot < 320)) {
+        if((rot > a) && (rot < b)) {
             //podgłośnienie muzyczki
             float newMusicVolume = Mathf.Clamp01((rot + 180f) / 360f);
             muzyczka.volume = Mathf.Lerp(muzyczka.volume, newMusicVolume, volumeChangeSpeed * Time.deltaTime);
