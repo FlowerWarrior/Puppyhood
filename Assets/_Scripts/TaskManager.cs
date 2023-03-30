@@ -30,8 +30,13 @@ public class TaskManager : MonoBehaviour
       task.TuneTheRadio,
       task.InteractClockFace,
       task.UnlockChest,
-      task.EnterDoor
-
+      task.EnterDoor,
+      task.CollectLighter,
+      task.DoCandlesPuzzle,
+      task.EnterDoor,
+      task.ClickTrumna,
+      task.DisablePlayerControls,
+      task.TurnPlayerToZombie
     };
     public int currentTaskID = 0;
 
@@ -76,5 +81,9 @@ public enum task
     WallUpAnim,
     TuneTheRadio,
     InteractClockFace,
-    UnlockChest
+    UnlockChest,
+    CollectLighter,
+    DoCandlesPuzzle,
+    ClickTrumna,
+    TurnPlayerToZombie
 }

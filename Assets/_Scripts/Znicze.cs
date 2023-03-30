@@ -100,10 +100,10 @@ public class Znicze : MonoBehaviour
     }
     void End()
     {
-        Debug.Log(ZniczeToClikck.Count);
         if (ZniczeToClikck.Count <= 0)
         {
-            gameObject.SetActive(false);
+            TaskManager.instance.SetTaskCompleted(task.DoCandlesPuzzle);
+            GetComponentInParent<UIpanel>().DestroySelf();
         }
     }
     #endregion

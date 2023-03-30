@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stool : MonoBehaviour, IInteractable
 {
     [SerializeField] Transform standPoint;
+    public bool isEnabled = true;
 
     public void Pressed()
     {
@@ -13,6 +14,7 @@ public class Stool : MonoBehaviour, IInteractable
 
     public void Released()
     {
-        DogMovement.instance.FlyTo(standPoint.position);
+        if (isEnabled)
+            DogMovement.instance.FlyTo(standPoint.position);
     }
 }

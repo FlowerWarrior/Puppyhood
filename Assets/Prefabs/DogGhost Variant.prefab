@@ -19,13 +19,45 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.5849056
       objectReference: {fileID: 0}
+    - target: {fileID: 1429444751, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: isGhost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429444751, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: animScale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429444751, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: animSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429444751, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: zombieDog
+      value: 
+      objectReference: {fileID: 21300000, guid: 65a442599e05bed4dafd80a6146634d3, type: 3}
+    - target: {fileID: 1429444751, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: dogSpriteRend
+      value: 
+      objectReference: {fileID: 2561745010752892719}
+    - target: {fileID: 514490342826339206, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 514490342826339206, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 514490342826339206, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5728282931405019693, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5728282931405019693, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.32
+      value: -7.14
       objectReference: {fileID: 0}
     - target: {fileID: 5728282931405019693, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -63,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5728282931405019693, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5728282931405019694, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -85,3 +121,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+--- !u!212 &2561745010752892719 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 514490342826339206, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+  m_PrefabInstance: {fileID: 2643318029077071017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7768710765507387014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5728282931405019695, guid: b9dffe813c08d454eb447adcbe9def3f, type: 3}
+  m_PrefabInstance: {fileID: 2643318029077071017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1483143229
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768710765507387014}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d69c45678fac1f34d858dfb5a446a527, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
