@@ -12,6 +12,7 @@ public class DogMovement : MonoBehaviour
 
     [SerializeField] AudioSource audioWheelLoop;
     [SerializeField] AudioSource audioStepsLoop;
+    [SerializeField] AudioSource audioGhostMoveLoop;
     [SerializeField] Transform mouthPoint;
     [SerializeField] float groundY = -2.3f;
     [SerializeField] float moveSpeed = 3f;
@@ -45,14 +46,28 @@ public class DogMovement : MonoBehaviour
         if (isMoving) return;
 
         isMoving = true;
-        audioWheelLoop.Play();
-        audioStepsLoop.Play();
-
+        if (isGhost)
+        {
+            audioGhostMoveLoop.Play();
+        }
+        else
+        {
+            audioWheelLoop.Play();
+            audioStepsLoop.Play();
+        }
+        
         float duration = Vector3.Distance(transform.position, position) / moveSpeed;
         transform.DOMove(position, duration).SetEase(Ease.Linear).onComplete += () => { isMoving = false; 
             dogArrivedAtTarget?.Invoke();
-            audioWheelLoop.Stop();
-            audioStepsLoop.Stop();
+            if (isGhost)
+            {
+                audioGhostMoveLoop.Stop();
+            }
+            else
+            {
+                audioWheelLoop.Stop();
+                audioStepsLoop.Stop();
+            }
         };
 
         if (isGhost)
