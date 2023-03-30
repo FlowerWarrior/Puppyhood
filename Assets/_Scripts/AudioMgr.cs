@@ -85,7 +85,7 @@ public class AudioMgr : MonoBehaviour
 
     public void PlaySound(AudioClip[] clip)
     {
-        if (clip.Length == 0 || clip == null)
+        if (clip == null || clip.Length <= 0)
         {
             Debug.Log("audioclip null, skipping");
             return;
