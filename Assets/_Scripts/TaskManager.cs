@@ -30,6 +30,7 @@ public class TaskManager : MonoBehaviour
       task.TuneTheRadio,
       task.InteractClockFace,
       task.UnlockChest,
+      task.CollectDogPart,
       task.EnterDoor,
       task.CollectLighter,
       task.DoCandlesPuzzle,

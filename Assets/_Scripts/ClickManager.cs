@@ -60,6 +60,7 @@ public class ClickManager : MonoBehaviour
                     if (currentInteractable != null)
                     {
                         currentInteractable.Pressed();
+                        AudioMgr.instance.PlayRandomSniff();
                     }
                 }
                 else

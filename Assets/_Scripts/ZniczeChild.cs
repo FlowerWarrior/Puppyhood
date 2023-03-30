@@ -18,6 +18,7 @@ public class ZniczeChild : MonoBehaviour
         if (Znicze.CheckCandle(gameObject)==true)
         {
             Znicze.ChangeTexture(gameObject);
+            AudioMgr.instance.PlaySound(AudioMgr.instance.lightUpCandle);
         }
     }
 }

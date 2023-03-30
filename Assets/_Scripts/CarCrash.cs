@@ -18,7 +18,6 @@ public class CarCrash : MonoBehaviour
     {
         if (newTask == task.CarCrash)
         {
-            AudioMgr.instance.PlayCrashAudio();
             TaskManager.instance.SetTaskCompleted(task.CarCrash);
             SceneChanger.instance.LoadNextScene(2);
         }

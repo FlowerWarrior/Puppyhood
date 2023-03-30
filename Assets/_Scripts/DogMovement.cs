@@ -10,6 +10,8 @@ public class DogMovement : MonoBehaviour
 
     public static event System.Action dogArrivedAtTarget;
 
+    [SerializeField] AudioSource audioWheelLoop;
+    [SerializeField] AudioSource audioStepsLoop;
     [SerializeField] Transform mouthPoint;
     [SerializeField] float groundY = -2.3f;
     [SerializeField] float moveSpeed = 3f;
@@ -43,9 +45,20 @@ public class DogMovement : MonoBehaviour
         if (isMoving) return;
 
         isMoving = true;
+        audioWheelLoop.Play();
+        audioStepsLoop.Play();
 
         float duration = Vector3.Distance(transform.position, position) / moveSpeed;
-        transform.DOMove(position, duration).SetEase(Ease.Linear).onComplete += () => { isMoving = false; dogArrivedAtTarget?.Invoke();};
+        transform.DOMove(position, duration).SetEase(Ease.Linear).onComplete += () => { isMoving = false; 
+            dogArrivedAtTarget?.Invoke();
+            audioWheelLoop.Stop();
+            audioStepsLoop.Stop();
+        };
+
+        if (isGhost)
+        {
+            AudioMgr.instance.PlaySound(AudioMgr.instance.ghostMove);
+        }
 
         // flip in right fly dir
         if (position.x < transform.position.x)
@@ -88,8 +101,23 @@ public class DogMovement : MonoBehaviour
 
         else if (newTask == task.TurnPlayerToZombie)
         {
-            dogArrivedAtTarget += () => { GetComponent<Animation>().Play(); };
-            FlyTo(new Vector3(0, 0, 0));
+            isMoving = true;
+
+            Vector3 position = Vector3.zero;
+            float duration = Vector3.Distance(transform.position, position) / moveSpeed;
+            transform.DOMove(position, duration).SetEase(Ease.Linear).onComplete += () => { GetComponent<Animation>().Play(); isMoving = false; dogArrivedAtTarget?.Invoke(); };
+
+            // flip in right fly dir
+            if (0 < transform.position.x)
+            {
+                Vector3 newScale = initialScale;
+                newScale.x = -newScale.x;
+                transform.localScale = newScale;
+            }
+            else
+            {
+                transform.localScale = initialScale;
+            }
         }
     }
 

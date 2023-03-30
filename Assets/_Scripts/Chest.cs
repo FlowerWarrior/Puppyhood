@@ -20,6 +20,7 @@ public class Chest : MonoBehaviour, IInteractable
     {
 
     }
+
     private void OnEnable()
     {
         TaskManager.OnNewTask += OnNewTaskCallback;

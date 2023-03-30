@@ -6,25 +6,90 @@ public class AudioMgr : MonoBehaviour
 {
     public static AudioMgr instance;
 
+    [SerializeField] public AudioSource audioPrefab;
+
+    [SerializeField] public AudioClip carCrash;
+    [SerializeField] public AudioClip[] dogSteps;
+    [SerializeField] public AudioClip dogWheels;
+    [SerializeField] public AudioClip ThrowStick;
+    [SerializeField] public AudioClip LandedStick;
+    [SerializeField] public AudioClip birdAway;
+    [SerializeField] public AudioClip ghostMove;
+    [SerializeField] public AudioClip collectDogPart;
+    [SerializeField] public AudioClip pinCodeClick;
+    [SerializeField] public AudioClip lightUpCandle;
+    [SerializeField] public AudioClip chestOpen;
+    [SerializeField] public AudioClip clockTick;
+    [SerializeField] public AudioClip wallGoingUp;
+    [SerializeField] public AudioClip ladderMoved;
+    [SerializeField] public AudioClip colllectLighter;
+    [SerializeField] public AudioClip[] barking;
+    [SerializeField] public AudioClip[] interactSniff;
+    [SerializeField] public AudioClip enterDoor;
+    [SerializeField] public AudioClip interactTrumna;
+    [SerializeField] public AudioClip pickupStick;
+    [SerializeField] public AudioClip uiClick;
+    
     private void Awake()
     {
         instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        TaskManager.OnNewTask += OnNewTaskCallback;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        TaskManager.OnNewTask -= OnNewTaskCallback;
     }
 
-    public void PlayCrashAudio()
+    private void OnNewTaskCallback(task completedTask, task newTask)
     {
+        switch (completedTask)
+        {
+            case task.CarCrash:
+                PlaySound(carCrash);
+                break;
+            case task.PickupStick:
+                PlaySound(pickupStick);
+                break;
+            case task.UnlockChest:
+                PlaySound(chestOpen);
+                break;
+            case task.EnterDoor:
+                PlaySound(enterDoor);
+                break;
+            case task.ClickTrumna:
+                PlaySound(interactTrumna);
+                break;
+            case task.InteractClockFace:
+                PlaySound(clockTick);
+                break;
+        }
 
+        switch (newTask)
+        {
+            case task.WallUpAnim:
+                PlaySound(wallGoingUp);
+                break;
+            case task.InteractBird:
+                PlaySound(birdAway);
+                break;
+        }
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        AudioSource newAudio = Instantiate(audioPrefab);
+        newAudio.clip = clip;
+        newAudio.Play();
+        Destroy(newAudio.gameObject, clip.length);
+    }
+
+    public void PlayRandomSniff()
+    {
+        PlaySound(interactSniff[Random.Range(0, interactSniff.Length)]);
     }
 }

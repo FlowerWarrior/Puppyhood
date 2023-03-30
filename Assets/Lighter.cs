@@ -12,6 +12,7 @@ public class Lighter : MonoBehaviour, IInteractable
     {
         if (TaskManager.instance.GetCurrentTask() == task.CollectLighter)
         {
+            Destroy(gameObject);
             TaskManager.instance.SetTaskCompleted(task.CollectLighter);
         }
     }

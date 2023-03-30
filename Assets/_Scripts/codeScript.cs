@@ -35,6 +35,8 @@ public class codeScript : MonoBehaviour
 
     void TaskOnClick(int buttonIndex)
     {
+        AudioMgr.instance.PlaySound(AudioMgr.instance.pinCodeClick);
+
         inputCode += (buttonIndex + 1).ToString();
 
         if (inputCode == code)

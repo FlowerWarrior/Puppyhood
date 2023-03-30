@@ -21,6 +21,7 @@ public class CameraShake : MonoBehaviour
         if (newTask == task.CarCrash)
         {
             StartCoroutine(Shake(duration, intensity));
+            Debug.Log("camera shake");
         }
     }
 
