@@ -398,7 +398,8 @@ MonoBehaviour:
   isGhost: 0
   animScale: 0.2
   animSpeed: 1.5
-  dogSpriteRend: {fileID: 0}
+  dogSpriteRend: {fileID: 514490342826339206}
+  spriteAnimator: {fileID: 915940523738058585}
   zombieDog: {fileID: 21300000, guid: c8bf875e4cbd8a6438390c0a0f4d4ded, type: 3}
 --- !u!1 &6705390886818350000
 GameObject:

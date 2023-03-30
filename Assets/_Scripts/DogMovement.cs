@@ -22,6 +22,7 @@ public class DogMovement : MonoBehaviour
     [SerializeField] float animScale = 0.2f;
     [SerializeField] float animSpeed = 1.5f;
     [SerializeField] SpriteRenderer dogSpriteRend;
+    [SerializeField] SpriteAnimation spriteAnimator;
     [SerializeField] Sprite zombieDog;
     Vector3 initialScale;
 
@@ -33,6 +34,7 @@ public class DogMovement : MonoBehaviour
     private void Start()
     {
         initialScale = transform.localScale;
+        spriteAnimator.enabled = false;
     }
 
     public void WalkTo(Vector3 position)
@@ -54,7 +56,9 @@ public class DogMovement : MonoBehaviour
         {
             audioWheelLoop.Play();
             audioStepsLoop.Play();
+            spriteAnimator.enabled = true;
         }
+
         
         float duration = Vector3.Distance(transform.position, position) / moveSpeed;
         transform.DOMove(position, duration).SetEase(Ease.Linear).onComplete += () => { isMoving = false; 
@@ -67,6 +71,7 @@ public class DogMovement : MonoBehaviour
             {
                 audioWheelLoop.Stop();
                 audioStepsLoop.Stop();
+                spriteAnimator.enabled = false;
             }
         };
 

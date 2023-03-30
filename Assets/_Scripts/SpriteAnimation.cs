@@ -15,12 +15,17 @@ public class SpriteAnimation: MonoBehaviour
     spriteRenderer = GetComponent<SpriteRenderer>();
    }
    
-     private void Start() 
-     { 
-         InvokeRepeating(nameof(AnimateSprite), 0, intervalTime);
-     } 
-         
-private void AnimateSprite()
+     private void OnEnable() 
+     {
+        StartCoroutine(AnimLoop());
+     }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    private void AnimateSprite()
     {
         spriteIndex++; 
   
@@ -31,4 +36,13 @@ private void AnimateSprite()
   
       spriteRenderer.sprite = sprites[spriteIndex];
     }
+
+    IEnumerator AnimLoop()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(intervalTime);
+            AnimateSprite();
+        }
+    }
 }

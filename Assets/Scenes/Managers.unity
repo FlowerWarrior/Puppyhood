@@ -319,7 +319,7 @@ MonoBehaviour:
   ghostMove:
   - {fileID: 8300000, guid: c535863e239491f4aa9ea32f23904694, type: 3}
   collectDogPart:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 512684ebd259c31429566f0d6419c86d, type: 3}
   pinCodeClick:
   - {fileID: 8300000, guid: bd09eadbff42c304dac8083579e7f14e, type: 3}
   lightUpCandle:
