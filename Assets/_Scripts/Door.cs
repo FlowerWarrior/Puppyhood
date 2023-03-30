@@ -17,4 +17,22 @@ public class Door : MonoBehaviour, IInteractable
             SceneChanger.instance.LoadNextScene(0);
         }
     }
+
+    private void OnEnable()
+    {
+        TaskManager.OnNewTask += OnNewTaskCallback;
+    }
+
+    private void OnDisable()
+    {
+        TaskManager.OnNewTask -= OnNewTaskCallback;
+    }
+
+    private void OnNewTaskCallback(task completedTask, task newTask)
+    {
+        if (newTask == task.EnterDoor)
+        {
+            GetComponent<Animation>().Play();
+        }
+    }
 }
