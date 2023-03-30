@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/House.unity
     guid: 4fb331cb7e2b3fe49959c65484037e18
   - enabled: 1
+    path: Assets/Scenes/cemetery.unity
+    guid: aa717041b40360f4ba8fd422dc7d91e1
+  - enabled: 1
+    path: Assets/Scenes/Krypta.unity
+    guid: 0b8292fc8920ec24eaa510ae8eeeee2c
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d1786ca1e89e60545b9bdae29a2d2fb4
   m_configObjects: {}
