@@ -32,6 +32,7 @@ public class Grandma : MonoBehaviour, IInteractable
             currentAnimID++;
             GetComponent<Animation>().clip = animClips[currentAnimID];
             GetComponent<Animation>().Play();
+            Debug.Log($"{currentAnimID}");
         }
     }
 
