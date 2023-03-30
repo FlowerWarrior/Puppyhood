@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsSceneName: Credits
-  MenuSceneName: 
+  MenuSceneName: Menu
 --- !u!1 &1438351165
 GameObject:
   m_ObjectHideFlags: 0
