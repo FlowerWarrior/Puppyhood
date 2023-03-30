@@ -50,7 +50,7 @@ public class RotateUIObject : MonoBehaviour
                 Debug.Log("Radio Completed");
                 miniGameFinished = true; //może dodać, że zamyka to UI odrazu?
                 TaskManager.instance.SetTaskCompleted(task.TuneTheRadio);
-                Destroy(transform.parent.gameObject);
+                GetComponentInParent<UIpanel>().DestroySelf();
             }
         } 
         else {

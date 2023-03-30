@@ -28,6 +28,7 @@ public class TaskManager : MonoBehaviour
       task.WallUpAnim,
       task.EnablePlayerControls,
       task.TuneTheRadio,
+      task.InteractClockFace,
       task.UnlockChest,
       task.EnterDoor
 

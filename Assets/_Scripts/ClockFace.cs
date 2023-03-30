@@ -14,5 +14,6 @@ public class ClockFace : MonoBehaviour
     public void Released()
     {
         Instantiate(clockFaceCanvas);
+        TaskManager.instance.SetTaskCompleted(task.InteractClockFace);
     }
 }
