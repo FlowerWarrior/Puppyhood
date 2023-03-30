@@ -6,6 +6,7 @@ public class Chest : MonoBehaviour
 {
     [SerializeField] GameObject chestUI;
     [SerializeField] Sprite chestUnlockedSprite;
+    [SerializeField] GameObject collectiblePart;
 
     public void Released()
     {
@@ -38,6 +39,7 @@ public class Chest : MonoBehaviour
         else if (completedTask == task.UnlockChest)
         {
             GetComponent<SpriteRenderer>().sprite = chestUnlockedSprite;
+            Instantiate(collectiblePart, transform.GetChild(0).position, Quaternion.identity, transform);
         }
     }
 }

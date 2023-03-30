@@ -19,52 +19,23 @@ public class RotateUIObject : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            OnPointerDown();
-        }
-        OnDrag();
+        RotateObject();
         Radio();
     }
 
-    private Vector2 pointerDownPosition;
-    private Quaternion initialRotation;
-
-    public void OnPointerDown()
-    {
-        Debug.Log("Debug skip of broken radio script");
-        TaskManager.instance.SetTaskCompleted(task.TuneTheRadio);
-        Destroy(transform.parent.gameObject);
-
-        // Save the initial position of the mouse pointer and the initial rotation of the object.
-        pointerDownPosition = Input.mousePosition;
-        initialRotation = transform.rotation;
-    }
-
-    public void OnDrag()
-    {
-        // Calculate the rotation angle based on the mouse movement.
-        Vector2 pointerDragPosition = Input.mousePosition;
-        Vector3 rotationDirection = (pointerDragPosition - pointerDownPosition).normalized;
-        float rotationAngle = Vector2.Dot(rotationDirection, Vector2.up) * 90f;
-
-        // Apply the rotation to the object.
-        transform.rotation = initialRotation * Quaternion.Euler(0f, 0f, rotationAngle);
-    }
-
-    Vector3 startMousePos;
-    public void RotateObject() 
-    {
+    public void RotateObject() {
         if(!Input.GetMouseButton(0)) return;
+        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = Vector3.Normalize(cursorPosition - objectToRotate.transform.position);
 
-        Vector3 direction = (startMousePos - Input.mousePosition) - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + transform.rotation.eulerAngles.z;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        Quaternion rotation = Quaternion.LookRotation(direction, Vector3.back);
+        rotation = Quaternion.Euler(0, 0, -rotation.eulerAngles.z);
+        objectToRotate.transform.rotation = rotation;
     }
 
     public void Radio() {
         rot = transform.rotation.eulerAngles.z;
-        if((rot > 0) && (rot <30)) {
+        if((rot > 300) && (rot < 320)) {
             //podgłośnienie muzyczki
             float newMusicVolume = Mathf.Clamp01((rot + 180f) / 360f);
             muzyczka.volume = Mathf.Lerp(muzyczka.volume, newMusicVolume, volumeChangeSpeed * Time.deltaTime);
@@ -78,6 +49,8 @@ public class RotateUIObject : MonoBehaviour
             if((radioCooldown < 0f) && (miniGameFinished == false)) { //zakończenie minigierki
                 Debug.Log("Radio Completed");
                 miniGameFinished = true; //może dodać, że zamyka to UI odrazu?
+                TaskManager.instance.SetTaskCompleted(task.TuneTheRadio);
+                Destroy(transform.parent.gameObject);
             }
         } 
         else {

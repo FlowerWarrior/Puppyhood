@@ -40,7 +40,7 @@ public class codeScript : MonoBehaviour
         if (inputCode == code)
         {
             TaskManager.instance.SetTaskCompleted(task.UnlockMusicPinCode);
-            Destroy(gameObject);
+            GetComponent<UIpanel>().DestroySelf();
         }
         else if (inputCode.Length == 4)
         {

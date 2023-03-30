@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1101760220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101760221}
+  - component: {fileID: 1428162389152124056}
+  m_Layer: 0
+  m_Name: World Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1101760221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101760220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -398.7326, y: -224.4793, z: -0.018510371}
+  m_LocalScale: {x: 0.41666663, y: 0.41666663, z: 0.41666663}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9119607606305687855}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428162389152124056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101760220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1449531af933f37418d8266d763cec9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToRotate: {fileID: 1101760220}
+  rot: 0
+  szum: {fileID: 6789554682107152000}
+  muzyczka: {fileID: 6789554681681637739}
+  radioCooldown: 5
+  volumeChangeSpeed: 5
+  maxVolume: 1
+  minVolume: 0
 --- !u!1 &6789554681414953206
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,9 +272,9 @@ GameObject:
   - component: {fileID: 6789554682075737465}
   - component: {fileID: 6789554682075737471}
   - component: {fileID: 6789554682075737464}
-  - component: {fileID: 6789554682075737470}
+  - component: {fileID: 3441338321297334499}
   m_Layer: 5
-  m_Name: Rotating
+  m_Name: Knob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +338,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6789554682075737470
+--- !u!114 &3441338321297334499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,17 +347,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6789554682075737466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1449531af933f37418d8266d763cec9b, type: 3}
+  m_Script: {fileID: 11500000, guid: c9be4d41f37928842a2a0f552c96d961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToRotate: {fileID: 6789554682075737466}
-  rot: 0
-  szum: {fileID: 6789554682107152000}
-  muzyczka: {fileID: 6789554681681637739}
-  radioCooldown: 5
-  volumeChangeSpeed: 5
-  maxVolume: 1
-  minVolume: 0
+  rotator: {fileID: 1101760221}
+  rectTransform: {fileID: 6789554682075737465}
 --- !u!1 &6789554682107152002
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +655,7 @@ RectTransform:
   - {fileID: 6789554682075737465}
   - {fileID: 6789554682107152001}
   - {fileID: 6789554681681637524}
+  - {fileID: 1101760221}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

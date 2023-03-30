@@ -69,7 +69,8 @@ public class ClickManager : MonoBehaviour
             }
             else
             {
-                DogMovement.instance.WalkTo(mouseWorldPos);
+                if (DogMovement.instance != null)
+                    DogMovement.instance.WalkTo(mouseWorldPos);
             }
 
         }

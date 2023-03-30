@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1362118113275724479}
   - component: {fileID: 1362118113275724476}
   - component: {fileID: 1362118113275724477}
+  - component: {fileID: 8441130061578696001}
   m_Layer: 5
   m_Name: ChestLock UI
   m_TagString: Untagged
@@ -263,6 +264,18 @@ MonoBehaviour:
   code: 020000000400000003000000
   spriteIndexes: 010000000100000001000000
   isUnlocked: 0
+--- !u!114 &8441130061578696001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362118113275724474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f8cffbb7bc3d7468b4119301c1d8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1362118113339470294
 GameObject:
   m_ObjectHideFlags: 0
