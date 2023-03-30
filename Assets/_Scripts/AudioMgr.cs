@@ -8,27 +8,27 @@ public class AudioMgr : MonoBehaviour
 
     [SerializeField] public AudioSource audioPrefab;
 
-    [SerializeField] public AudioClip carCrash;
+    [SerializeField] public AudioClip[] carCrash;
     [SerializeField] public AudioClip[] dogSteps;
-    [SerializeField] public AudioClip dogWheels;
-    [SerializeField] public AudioClip ThrowStick;
-    [SerializeField] public AudioClip LandedStick;
-    [SerializeField] public AudioClip birdAway;
-    [SerializeField] public AudioClip ghostMove;
-    [SerializeField] public AudioClip collectDogPart;
-    [SerializeField] public AudioClip pinCodeClick;
-    [SerializeField] public AudioClip lightUpCandle;
-    [SerializeField] public AudioClip chestOpen;
-    [SerializeField] public AudioClip clockTick;
-    [SerializeField] public AudioClip wallGoingUp;
-    [SerializeField] public AudioClip ladderMoved;
-    [SerializeField] public AudioClip colllectLighter;
+    [SerializeField] public AudioClip[] dogWheels;
+    [SerializeField] public AudioClip[] ThrowStick;
+    [SerializeField] public AudioClip[] LandedStick;
+    [SerializeField] public AudioClip[] birdAway;
+    [SerializeField] public AudioClip[] ghostMove;
+    [SerializeField] public AudioClip[] collectDogPart;
+    [SerializeField] public AudioClip[] pinCodeClick;
+    [SerializeField] public AudioClip[] lightUpCandle;
+    [SerializeField] public AudioClip[] chestOpen;
+    [SerializeField] public AudioClip[] clockTick;
+    [SerializeField] public AudioClip[] wallGoingUp;
+    [SerializeField] public AudioClip[] ladderMoved;
+    [SerializeField] public AudioClip[] colllectLighter;
     [SerializeField] public AudioClip[] barking;
     [SerializeField] public AudioClip[] interactSniff;
-    [SerializeField] public AudioClip enterDoor;
-    [SerializeField] public AudioClip interactTrumna;
-    [SerializeField] public AudioClip pickupStick;
-    [SerializeField] public AudioClip uiClick;
+    [SerializeField] public AudioClip[] enterDoor;
+    [SerializeField] public AudioClip[] interactTrumna;
+    [SerializeField] public AudioClip[] pickupStick;
+    [SerializeField] public AudioClip[] uiClick;
     
     private void Awake()
     {
@@ -67,6 +67,9 @@ public class AudioMgr : MonoBehaviour
             case task.InteractClockFace:
                 PlaySound(clockTick);
                 break;
+            case task.CollectDogPart:
+                PlaySound(collectDogPart);
+                break;
         }
 
         switch (newTask)
@@ -80,23 +83,16 @@ public class AudioMgr : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip clip)
+    public void PlaySound(AudioClip[] clip)
     {
-        if (clip == null)
+        if (clip.Length == 0 || clip == null)
         {
             Debug.Log("audioclip null, skipping");
             return;
         }
         AudioSource newAudio = Instantiate(audioPrefab);
-        newAudio.clip = clip;
+        newAudio.clip = clip[Random.Range(0, clip.Length)];
         newAudio.Play();
-        Destroy(newAudio.gameObject, clip.length);
-    }
-
-    public void PlayRandomSniff()
-    {
-        if (interactSniff.Length == 0) return;
-
-        PlaySound(interactSniff[Random.Range(0, interactSniff.Length)]);
+        Destroy(newAudio.gameObject, newAudio.clip.length);
     }
 }

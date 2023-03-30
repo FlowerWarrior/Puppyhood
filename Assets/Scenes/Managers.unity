@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75f2dff9feade64091fa8389833c1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 3
+  interactDistance: 3.3
   isUIPanelOpened: 0
 --- !u!4 &462828440
 Transform:

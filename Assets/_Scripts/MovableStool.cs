@@ -30,6 +30,7 @@ public class MovableStool : MonoBehaviour, IInteractable
         if (transform.position.x >= maxXPosition)
         {
             isInPlace = true;
+            AudioMgr.instance.PlaySound(AudioMgr.instance.ladderMoved);
         }
 
         isFollowingMouse = false;
