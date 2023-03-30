@@ -82,6 +82,11 @@ public class AudioMgr : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
+        if (clip == null)
+        {
+            Debug.Log("audioclip null, skipping");
+            return;
+        }
         AudioSource newAudio = Instantiate(audioPrefab);
         newAudio.clip = clip;
         newAudio.Play();

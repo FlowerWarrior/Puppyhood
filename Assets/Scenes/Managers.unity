@@ -304,6 +304,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a68d02859bb9747a38265134718a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPrefab: {fileID: 842834146119418517, guid: fb80d6b4c15c62749904912291305c3c, type: 3}
+  carCrash: {fileID: 0}
+  dogSteps: []
+  dogWheels: {fileID: 0}
+  ThrowStick: {fileID: 0}
+  LandedStick: {fileID: 0}
+  birdAway: {fileID: 0}
+  ghostMove: {fileID: 0}
+  collectDogPart: {fileID: 0}
+  pinCodeClick: {fileID: 0}
+  lightUpCandle: {fileID: 0}
+  chestOpen: {fileID: 0}
+  clockTick: {fileID: 0}
+  wallGoingUp: {fileID: 0}
+  ladderMoved: {fileID: 0}
+  colllectLighter: {fileID: 0}
+  barking: []
+  interactSniff: []
+  enterDoor: {fileID: 0}
+  interactTrumna: {fileID: 0}
+  pickupStick: {fileID: 0}
+  uiClick: {fileID: 0}
 --- !u!4 &455025172
 Transform:
   m_ObjectHideFlags: 0
