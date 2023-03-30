@@ -44,6 +44,12 @@ public class Grandma : MonoBehaviour, IInteractable
     {
         OnStickLanded?.Invoke();
         TaskManager.instance.SetTaskCompleted(task.GrandmaAnim);
+
+    }
+
+    public void StickThrowAudio()
+    {
+        AudioMgr.instance.PlaySound(AudioMgr.instance.ThrowStick);
     }
 
     public void Pressed()

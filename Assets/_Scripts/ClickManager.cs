@@ -60,6 +60,7 @@ public class ClickManager : MonoBehaviour
                     if (currentInteractable != null)
                     {
                         currentInteractable.Pressed();
+                        AudioMgr.instance.PlayRandomSniff();
                     }
                 }
                 else
@@ -69,7 +70,8 @@ public class ClickManager : MonoBehaviour
             }
             else
             {
-                DogMovement.instance.WalkTo(mouseWorldPos);
+                if (DogMovement.instance != null)
+                    DogMovement.instance.WalkTo(mouseWorldPos);
             }
 
         }

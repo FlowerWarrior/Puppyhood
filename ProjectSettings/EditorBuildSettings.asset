@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prolog_2.unity
     guid: 2f637a30059fe604da41f75cd27c614c
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 67b98e27c29e8af4980b7e84239f5907
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: 4fb331cb7e2b3fe49959c65484037e18
+  - enabled: 1
+    path: Assets/Scenes/cemetery.unity
+    guid: aa717041b40360f4ba8fd422dc7d91e1
+  - enabled: 1
+    path: Assets/Scenes/Krypta.unity
+    guid: 0b8292fc8920ec24eaa510ae8eeeee2c
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: d1786ca1e89e60545b9bdae29a2d2fb4
   m_configObjects: {}

@@ -35,12 +35,14 @@ public class codeScript : MonoBehaviour
 
     void TaskOnClick(int buttonIndex)
     {
+        AudioMgr.instance.PlaySound(AudioMgr.instance.pinCodeClick);
+
         inputCode += (buttonIndex + 1).ToString();
 
         if (inputCode == code)
         {
             TaskManager.instance.SetTaskCompleted(task.UnlockMusicPinCode);
-            Destroy(gameObject);
+            GetComponent<UIpanel>().DestroySelf();
         }
         else if (inputCode.Length == 4)
         {

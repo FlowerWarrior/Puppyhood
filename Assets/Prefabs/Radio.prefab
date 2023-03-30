@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1155257170743940693}
   - component: {fileID: 1155257170743940698}
   - component: {fileID: 1155257170743940692}
-  - component: {fileID: 1155257170743940695}
+  - component: {fileID: 7370184275491215284}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1155257170743940695
+--- !u!114 &7370184275491215284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1155257170743940699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1877d4c04436d7642ab40d7ce4d070e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ca55868638508347a239a8591021014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pinCodeUI: {fileID: 3957413775440235683, guid: 5ea33d809ab9f2f45b9e7474c0a84338, type: 3}
+  radioUI: {fileID: 9119607606305687840, guid: 559f21b94940d6a48a1c9dccb8500f7d, type: 3}

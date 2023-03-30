@@ -123,26 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &511307574 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4696311090189099458, guid: 8f3690265abdb0049a215e50569eb332, type: 3}
-  m_PrefabInstance: {fileID: 4696311090282958580}
-  m_PrefabAsset: {fileID: 0}
---- !u!111 &511307582
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511307574}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b46912ecd46cad941ab8b19eb669e61a, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &548388146
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,37 +613,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3dde9d43b18c854cbb02fdb05970db7, type: 3}
---- !u!1 &1718326778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4696311088711506702, guid: 8f3690265abdb0049a215e50569eb332, type: 3}
-  m_PrefabInstance: {fileID: 4696311090282958580}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1718326781
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718326778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1718326782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718326778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e5ee34217e7924087baf7366f15de9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clockFaceCanvas: {fileID: 8885436023591969489, guid: ff4d467439b968b46b0b911cba9d25d2, type: 3}
 --- !u!1 &1900285393
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,10 +829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4696311088711506703, guid: 8f3690265abdb0049a215e50569eb332, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.29493752
-      objectReference: {fileID: 0}
     - target: {fileID: 4696311090189099458, guid: 8f3690265abdb0049a215e50569eb332, type: 3}
       propertyPath: m_Name
       value: Clock

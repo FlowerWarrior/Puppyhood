@@ -34,6 +34,7 @@ public class Stick : MonoBehaviour, IInteractable
     public void StickFellOnGroundFromTree()
     {
         TaskManager.instance.SetTaskCompleted(task.StickAnim);
+        AudioMgr.instance.PlaySound(AudioMgr.instance.LandedStick);
     }
 
     void Update()

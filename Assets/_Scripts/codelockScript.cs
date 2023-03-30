@@ -32,6 +32,7 @@ public class codelockScript : MonoBehaviour
         {
             isUnlocked = true;
             TaskManager.instance.SetTaskCompleted(task.UnlockChest);
+            GetComponent<UIpanel>().DestroySelf();
         }
     }
 

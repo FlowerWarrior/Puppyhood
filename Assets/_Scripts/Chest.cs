@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour
+public class Chest : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject chestUI;
     [SerializeField] Sprite chestUnlockedSprite;
+    [SerializeField] GameObject collectiblePart;
 
     public void Released()
     {
@@ -19,6 +20,7 @@ public class Chest : MonoBehaviour
     {
 
     }
+
     private void OnEnable()
     {
         TaskManager.OnNewTask += OnNewTaskCallback;
@@ -38,6 +40,7 @@ public class Chest : MonoBehaviour
         else if (completedTask == task.UnlockChest)
         {
             GetComponent<SpriteRenderer>().sprite = chestUnlockedSprite;
+            Instantiate(collectiblePart, transform.GetChild(0).position, Quaternion.identity, transform);
         }
     }
 }
