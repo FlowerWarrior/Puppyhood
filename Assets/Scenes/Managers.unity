@@ -305,27 +305,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPrefab: {fileID: 842834146119418517, guid: fb80d6b4c15c62749904912291305c3c, type: 3}
-  carCrash: {fileID: 0}
+  carCrash:
+  - {fileID: 8300000, guid: eb9cc7cd8becda243a2dba97b9ffd217, type: 3}
   dogSteps: []
-  dogWheels: {fileID: 0}
-  ThrowStick: {fileID: 0}
-  LandedStick: {fileID: 0}
-  birdAway: {fileID: 0}
-  ghostMove: {fileID: 0}
-  collectDogPart: {fileID: 0}
-  pinCodeClick: {fileID: 0}
-  lightUpCandle: {fileID: 0}
-  chestOpen: {fileID: 0}
-  clockTick: {fileID: 0}
-  wallGoingUp: {fileID: 0}
-  ladderMoved: {fileID: 0}
-  colllectLighter: {fileID: 0}
-  barking: []
-  interactSniff: []
-  enterDoor: {fileID: 0}
-  interactTrumna: {fileID: 0}
-  pickupStick: {fileID: 0}
-  uiClick: {fileID: 0}
+  dogWheels:
+  - {fileID: 8300000, guid: b9f4d28e7faa1df4b859aa93cb1bcc6c, type: 3}
+  ThrowStick:
+  - {fileID: 8300000, guid: 2bde3d7ee37a5624488106cb3bdcb117, type: 3}
+  LandedStick:
+  - {fileID: 8300000, guid: 5b9d25e9c4090df429067087c13551de, type: 3}
+  birdAway:
+  - {fileID: 8300000, guid: 87aef23401d0b484ea74dcc2d8628625, type: 3}
+  ghostMove:
+  - {fileID: 8300000, guid: c535863e239491f4aa9ea32f23904694, type: 3}
+  collectDogPart:
+  - {fileID: 0}
+  pinCodeClick:
+  - {fileID: 8300000, guid: bd09eadbff42c304dac8083579e7f14e, type: 3}
+  lightUpCandle:
+  - {fileID: 8300000, guid: da50ed7111d583c46a5406cc69a54ec2, type: 3}
+  chestOpen:
+  - {fileID: 8300000, guid: 617d08aef8484f54e9b93c446b525408, type: 3}
+  clockTick:
+  - {fileID: 8300000, guid: cc2c27d76be5efc48afae62b6450cad0, type: 3}
+  wallGoingUp:
+  - {fileID: 8300000, guid: dbeb0d6766217b1479bbce9a236c8c83, type: 3}
+  ladderMoved:
+  - {fileID: 8300000, guid: 1ce48494fea4834499f2d516b301b37e, type: 3}
+  colllectLighter:
+  - {fileID: 8300000, guid: 9c651d343e23f4c4da4c17896789df9e, type: 3}
+  barking:
+  - {fileID: 8300000, guid: 512684ebd259c31429566f0d6419c86d, type: 3}
+  - {fileID: 8300000, guid: de6a5190be6c8ef4ba42e66f4c20817d, type: 3}
+  - {fileID: 8300000, guid: d263a6696c0cf5741a87999ac331248a, type: 3}
+  - {fileID: 8300000, guid: 4c2e204153c6c44498c91db3922d49bd, type: 3}
+  - {fileID: 8300000, guid: 9d338bdea350f324e89051adf9e5b127, type: 3}
+  interactSniff:
+  - {fileID: 8300000, guid: 26aa31d3939982f4f87e5eef6c155052, type: 3}
+  - {fileID: 8300000, guid: c6eec802a726d7c4989c4de11168db1f, type: 3}
+  - {fileID: 8300000, guid: f3c3902c88b42844c91b10bdc53878b0, type: 3}
+  enterDoor:
+  - {fileID: 8300000, guid: 6e5853b555eaa9f4a80d1f2cfa4c4028, type: 3}
+  interactTrumna:
+  - {fileID: 8300000, guid: badd1051674b4524080f1788ca28705c, type: 3}
+  pickupStick:
+  - {fileID: 0}
+  uiClick:
+  - {fileID: 8300000, guid: 48a59951cb7d884428987c9a6420d228, type: 3}
 --- !u!4 &455025172
 Transform:
   m_ObjectHideFlags: 0
