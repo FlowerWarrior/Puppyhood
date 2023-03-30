@@ -349,7 +349,7 @@ MonoBehaviour:
   interactTrumna:
   - {fileID: 8300000, guid: badd1051674b4524080f1788ca28705c, type: 3}
   pickupStick:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: d263a6696c0cf5741a87999ac331248a, type: 3}
   uiClick:
   - {fileID: 8300000, guid: 48a59951cb7d884428987c9a6420d228, type: 3}
 --- !u!4 &455025172
