@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocksArray: []
-  ZniczSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  ZniczZapalonySprite: {fileID: 0}
+  ZniczSprite: {fileID: 21300000, guid: 1f536c1498bed1e4380440e42d106ced, type: 3}
+  ZniczZapalonySprite: {fileID: 21300000, guid: c593a442b0fdae444b722a2b0ff92c42, type: 3}
   size: {x: 0, y: 0, z: 0}
   gridX: 5
   gridY: 2
