@@ -3552,6 +3552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 375509650258922246, guid: 2f497f1ed9530b54fafd41568624bd50, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 375509650258922248, guid: 2f497f1ed9530b54fafd41568624bd50, type: 3}
       propertyPath: m_Name
       value: Bird

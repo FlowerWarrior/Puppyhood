@@ -39,14 +39,14 @@ public class codelockScript : MonoBehaviour
 
     void upButtonTask(int buttonIndex)
     {
-        spriteIndexes[buttonIndex] = (spriteIndexes[buttonIndex] % 4) + 1;
+        spriteIndexes[buttonIndex] = (spriteIndexes[buttonIndex] % sprites.Length) + 1;
         images[buttonIndex].sprite = sprites[spriteIndexes[buttonIndex] - 1];
         UpdateLock();
     }
 
     void downButtonTask(int buttonIndex)
     {
-        spriteIndexes[buttonIndex] = (spriteIndexes[buttonIndex] - 2 + 4) % 4 + 1;
+        spriteIndexes[buttonIndex] = (spriteIndexes[buttonIndex] - 2 + sprites.Length) % sprites.Length + 1;
         images[buttonIndex].sprite = sprites[spriteIndexes[buttonIndex] - 1];
         UpdateLock();
     }

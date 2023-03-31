@@ -49,9 +49,6 @@ public class AudioMgr : MonoBehaviour
     {
         switch (completedTask)
         {
-            case task.CarCrash:
-                PlaySound(carCrash);
-                break;
             case task.PickupStick:
                 PlaySound(pickupStick);
                 break;
@@ -63,9 +60,6 @@ public class AudioMgr : MonoBehaviour
                 break;
             case task.ClickTrumna:
                 PlaySound(interactTrumna);
-                break;
-            case task.InteractClockFace:
-                PlaySound(clockTick);
                 break;
             case task.CollectDogPart:
                 PlaySound(collectDogPart);
@@ -79,6 +73,12 @@ public class AudioMgr : MonoBehaviour
                 break;
             case task.InteractBird:
                 PlaySound(birdAway);
+                break;
+            case task.InteractClockFace:
+                PlaySound(clockTick);
+                break;
+            case task.CarCrash:
+                PlaySound(carCrash);
                 break;
         }
     }

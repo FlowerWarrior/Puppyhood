@@ -48,7 +48,7 @@ MonoBehaviour:
   rot: 0
   szum: {fileID: 6789554682107152000}
   muzyczka: {fileID: 6789554681681637739}
-  radioCooldown: 4
+  radioCooldown: 2
   volumeChangeSpeed: 10
   maxVolume: 1
   minVolume: 0

@@ -4615,12 +4615,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1113901665271749401, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9661111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113901665271749401, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.53639686
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113901665271749401, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1113901665271749401, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.839
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 2448136986432875418, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
       propertyPath: m_IsActive
@@ -4664,14 +4672,18 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 88162b8f6f1fc664f90b60fc616ace32, type: 3}
     - target: {fileID: 7726660644075984111, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.8396226
       objectReference: {fileID: 0}
     - target: {fileID: 7726660644075984111, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.8396226
       objectReference: {fileID: 0}
     - target: {fileID: 7726660644075984111, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
       propertyPath: m_Color.r
+      value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 7726660644075984111, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8204480039169472614, guid: 2364fba8d61e3df4f9fb7fcc65729c35, type: 3}
@@ -5462,6 +5474,18 @@ PrefabInstance:
     - target: {fileID: 4907333870023211554, guid: a80b61f1e8e6c4740ac45bdad261af6f, type: 3}
       propertyPath: m_Name
       value: Zapalnicza
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964421893551376617, guid: a80b61f1e8e6c4740ac45bdad261af6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964421893551376617, guid: a80b61f1e8e6c4740ac45bdad261af6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964421893551376617, guid: a80b61f1e8e6c4740ac45bdad261af6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80b61f1e8e6c4740ac45bdad261af6f, type: 3}
