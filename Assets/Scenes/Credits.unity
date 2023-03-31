@@ -549,8 +549,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Leads\r\n\r\nTomasz Piasecki - programowanie\r/visuals\nKaja Pod\u017Corska
-    - level design/muzyka/d\u017Awi\u0119k\r\nJustyna \u0141apu\u0107 - grafika\r\n\r\n\r\nLevel
+  m_text: "Leads\r\n\nTomasz Piasecki - programowanie&visuals\nKaja Pod\u017Corska
+    - level design&muzyka&d\u017Awi\u0119k\r\nJustyna \u0141apu\u0107-Docha - grafika\r\n\r\n\r\nLevel
     Design\r\n\r\nMicha\u0142 Saniternik\r\nFranciszek Onopa\r\nAleksander Kami\u0144ski\r\nRyszard
     Andrzejewski\r\n\r\n\r\nProgramowanie\r\n\r\nKonsanty Stachera\r\nPiotr W\xF3jcik\r\nFranciszek
     P\u0142echa\r\nFilip Przyby\u0142a\r\nKaja Jaroszewska\r\nLeonard Muszy\u0144ski\r\nKamil
