@@ -14,7 +14,6 @@ public class RotateUIObject : MonoBehaviour
     public float a, b;
 
     void Start() {
-        volumeChangeSpeed = 2f;
         muzyczka.volume = 0f;
     }
 
