@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Krypta.unity
     guid: 0b8292fc8920ec24eaa510ae8eeeee2c
   - enabled: 1
+    path: Assets/Scenes/FinalEnd.unity
+    guid: 5f78930d3dd58f449a7509db1f756dcd
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d1786ca1e89e60545b9bdae29a2d2fb4
   m_configObjects: {}

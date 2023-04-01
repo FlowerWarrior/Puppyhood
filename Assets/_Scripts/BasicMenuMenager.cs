@@ -29,4 +29,9 @@ public class BasicMenuMenager : MonoBehaviour
         SceneManager.UnloadSceneAsync(creditsSceneName);
         SceneManager.LoadScene(MenuSceneName, LoadSceneMode.Additive);
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
